@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "fiap-hack-soat7-postgres-rds-state"
+  bucket = "fiap-hack-soat7-redis-state"
 }
 
 data "aws_eks_cluster" "eks" {
@@ -21,7 +21,8 @@ data "aws_subnets" "eks_subnets" {
   }
 }
 
-resource "aws_elasticache_subnet_group" "example" {
-  name       = "ec-subnet-group"
+resource "aws_elasticache_subnet_group" "redis_subnet_group" {
+  name       = "hack-fiap-soat7-redis-subnet-group"
   subnet_ids = data.aws_subnets.eks_subnets.ids
+  description = "Subnet group for ElastiCache Redis"
 }
