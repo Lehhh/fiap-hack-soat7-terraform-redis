@@ -47,5 +47,3 @@ Liste as saídas importantes:
 ## Contribuição
 Para contribuir com este projeto, por favor, abra um pull request.
 
-## Licença
-Este projeto está licenciado sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
